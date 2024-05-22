@@ -52,8 +52,65 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (imgAvatar && nuevaImagenURL) {
         let timestamp = new Date().getTime();
-        imgAvatar.src = nuevaImagenURL + "?t=" + timestamp;
+        imgAvatar.src = nuevaImagenURL + "juanfer.jpeg" + timestamp;
     }
 });
 // ej h
+document.addEventListener('DOMContentLoaded', function() {
+    let pelicula = {
+        nombre: "",
+        director: "",
+        duracion: 0,
+        actor: ""
+    };
+
+    pelicula.nombre = prompt("Ingresa el nombre de tu película favorita:");
+    pelicula.director = prompt("Ingresa el nombre del director de la película:");
+    pelicula.duracion = parseFloat(prompt("Ingresa la duración de la película en minutos:"));
+    pelicula.actor = prompt("Ingresa el nombre del actor principal de la película:");
+
+    if (pelicula.nombre && pelicula.director && !isNaN(pelicula.duracion) && pelicula.actor) {
+        alert("Información de tu película favorita:\n" +
+              "Nombre: " + pelicula.nombre + "\n" +
+              "Director: " + pelicula.director + "\n" +
+              "Duración: " + pelicula.duracion + " minutos\n" +
+              "Actor principal: " + pelicula.actor);
+    } else {
+        alert("Algunos datos no se ingresaron correctamente. Por favor, intenta de nuevo.");
+    }
+});
+// ej i
+
+// ej j
+document.addEventListener('DOMContentLoaded', function() {
+    let pelicula = {
+        nombre: "",
+        director: "",
+        duracion: 0,
+        actor: ""
+    };
+
+    pelicula.nombre = prompt("Ingresa el nombre de tu película favorita:");
+    pelicula.director = prompt("Ingresa el nombre del director de la película:");
+    pelicula.duracion = parseFloat(prompt("Ingresa la duración de la película en minutos:"));
+    pelicula.actor = prompt("Ingresa el nombre del actor principal de la película:");
+
+    if (pelicula.nombre && pelicula.director && !isNaN(pelicula.duracion) && pelicula.actor) {
+        let ulPelicula = document.getElementById("pelicula");
+
+        ulPelicula.innerHTML = 
+            "<li><strong>Nombre:</strong> " + pelicula.nombre + "</li>" +
+            "<li><strong>Director:</strong> " + pelicula.director + "</li>" +
+            "<li><strong>Duración:</strong> " + pelicula.duracion + " minutos</li>" +
+            "<li><strong>Actor principal:</strong> " + pelicula.actor + "</li>";
+            
+        ulPelicula.style.display = "block";
+    } else {
+        alert("Algunos datos no se ingresaron correctamente. Por favor, intenta de nuevo.");
+    }
+});
+
+
+
+
 
