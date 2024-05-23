@@ -29,88 +29,50 @@ if (edad > 17){
     accesoDenegado.style.display = "block";
 }
 // ej f
-document.addEventListener('DOMContentLoaded', function() {
-    
-    let leGustaProgramacion = confirm("¿Te gusta la programación?");
-
-    let divBackgroundImg = document.querySelector('.background-img');
-
-    let img = document.createElement('img');
-
-    if (leGustaProgramacion) {
-        img.src = 'img/programmer.jpeg';
-    } else {
-        img.src = 'img/gatito.jpeg';
-    }
-    divBackgroundImg.appendChild(img);
-});
+let gustaProgramacion = confirm("¿Te gusta la programación?");
+let backgroundImg = document.querySelector('.background-img');
+if (gustaProgramacion) {
+    backgroundImg.style.backgroundImage = "url'dom/img/programmer.jpeg'"; 
+} else {
+    backgroundImg.style.backgroundImage = "url('dom/img/gatito.jpeg')";
+}
 // ej g
 document.addEventListener('DOMContentLoaded', function() {
-    let nuevaImagenURL = prompt("Por favor, ingresa la URL de la nueva imagen:");
-
     let imgAvatar = document.querySelector('img.avatar');
 
-    if (imgAvatar && nuevaImagenURL) {
-        let timestamp = new Date().getTime();
-        imgAvatar.src = nuevaImagenURL + "juanfer.jpeg" + timestamp;
-    }
-});
-// ej h
-document.addEventListener('DOMContentLoaded', function() {
-    let pelicula = {
-        nombre: "",
-        director: "",
-        duracion: 0,
-        actor: ""
-    };
+    let nuevaImagenURL = prompt("Por favor, ingresa la URL de la nueva imagen:", "https://www.eldiariocba.com.ar/u/fotografias/fotosnoticias/2023/7/30/109102.jpg");
 
-    pelicula.nombre = prompt("Ingresa el nombre de tu película favorita:");
-    pelicula.director = prompt("Ingresa el nombre del director de la película:");
-    pelicula.duracion = parseFloat(prompt("Ingresa la duración de la película en minutos:"));
-    pelicula.actor = prompt("Ingresa el nombre del actor principal de la película:");
-
-    if (pelicula.nombre && pelicula.director && !isNaN(pelicula.duracion) && pelicula.actor) {
-        alert("Información de tu película favorita:\n" +
-              "Nombre: " + pelicula.nombre + "\n" +
-              "Director: " + pelicula.director + "\n" +
-              "Duración: " + pelicula.duracion + " minutos\n" +
-              "Actor principal: " + pelicula.actor);
+    if (nuevaImagenURL) {
+        
+        imgAvatar.src = nuevaImagenURL;
     } else {
-        alert("Algunos datos no se ingresaron correctamente. Por favor, intenta de nuevo.");
+        alert("No se ingresó una URL válida. Por favor, intenta de nuevo.");
     }
 });
-// ej i
+
+// ej h + i
+let pelicula = {
+    nombre: "",
+    director: "",
+    duracion: 0,
+    actor: ""
+};
+
+pelicula.nombre = prompt("Ingrese el nombre de su película favorita:");
+pelicula.director = prompt("Ingrese el nombre del director de la película:");
+pelicula.duracion = Number(prompt("Ingrese la duración de la película en minutos:"));
+pelicula.actor = prompt("Ingrese el nombre del actor principal de la película:");
+
+console.log(`Información de la película favorita del usuario:\nNombre: ${pelicula.nombre}\nDirector: ${pelicula.director}\nDuración: ${pelicula.duracion} minutos\nActor Principal: ${pelicula.actor}`);
 
 // ej j
-document.addEventListener('DOMContentLoaded', function() {
-    let pelicula = {
-        nombre: "",
-        director: "",
-        duracion: 0,
-        actor: ""
-    };
+document.getElementById("nombre").textContent = `Nombre: ${pelicula.nombre}`;
+document.getElementById("director").textContent = `Director: ${pelicula.director}`;
+document.getElementById("duracion").textContent = `Duración: ${pelicula.duracion} minutos`;
+document.getElementById("actor").textContent = `Actor Principal: ${pelicula.actor}`;
 
-    pelicula.nombre = prompt("Ingresa el nombre de tu película favorita:");
-    pelicula.director = prompt("Ingresa el nombre del director de la película:");
-    pelicula.duracion = parseFloat(prompt("Ingresa la duración de la película en minutos:"));
-    pelicula.actor = prompt("Ingresa el nombre del actor principal de la película:");
-
-    if (pelicula.nombre && pelicula.director && !isNaN(pelicula.duracion) && pelicula.actor) {
-        let ulPelicula = document.getElementById("pelicula");
-
-        ulPelicula.innerHTML = 
-            "<li><strong>Nombre:</strong> " + pelicula.nombre + "</li>" +
-            "<li><strong>Director:</strong> " + pelicula.director + "</li>" +
-            "<li><strong>Duración:</strong> " + pelicula.duracion + " minutos</li>" +
-            "<li><strong>Actor principal:</strong> " + pelicula.actor + "</li>";
-            
-        ulPelicula.style.display = "block";
-    } else {
-        alert("Algunos datos no se ingresaron correctamente. Por favor, intenta de nuevo.");
-    }
-});
-
-
+// ej k
+document.querySelector("#pelicula ul").style.display = "block";
 
 
 
