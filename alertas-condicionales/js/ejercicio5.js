@@ -17,7 +17,7 @@ console.log(fanDeportes);
 alert(`Muchas gracias ${nombre}`);
 
 // Interactuando con el usuario 5
-const usuario = {
+let usuario = {
     nombre: nombre,
     edad: edad,
     fanDeportes: fanDeportes,

@@ -2,19 +2,19 @@
 
 // Función para obtener el valor de un parámetro de la URL
 function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
+    let urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
 }
 
 // Capturar el elemento "search-results"
-const searchResults = document.querySelector('.search-results');
+let searchResults = document.querySelector('.search-results');
 
 // Obtener el valor de búsqueda desde la URL
-const query = getQueryParam('q');
+let query = getQueryParam('q');
 
 if (query) {
-    // Construir la URL del endpoint de búsqueda de la API
-    const apiUrl = `https://rickandmortyapi.com/api/character/?name=${query}`;
+    // letruir la URL del endpoint de búsqueda de la API
+    let apiUrl = `https://rickandmortyapi.com/api/character/?name=${query}`;
 
     // Hacer la solicitud a la API
     fetch(apiUrl)

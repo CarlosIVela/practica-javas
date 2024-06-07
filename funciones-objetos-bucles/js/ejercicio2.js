@@ -1,4 +1,4 @@
-const misDatos = {
+let misDatos = {
     nombre: "Carlos",
     apellido: "Vela",
     dni: "44360541",
@@ -6,7 +6,7 @@ const misDatos = {
 };
 console.log(misDatos);
 
-const misDatos1 = {
+let misDatos1 = {
     nombre: "Carlos",
     apellido: "Vela",
     dni: "44360541",
@@ -17,7 +17,7 @@ const misDatos1 = {
 };
 console.log(misDatos1.saludar());
 
-const auto = {
+let auto = {
     marca: "Toyota",
     modelo: "Corolla",
     anio: 2022,
@@ -40,7 +40,7 @@ auto.retroceder(5);
 auto.avanzar(3);
 console.log(auto.posicion);
 
-const nuevoAuto = {
+let nuevoAuto = {
     marca: "Toyota",
     modelo: "Corolla",
     anio: 2022,
@@ -57,7 +57,7 @@ nuevoAuto.moverse(3);
 
 console.log(nuevoAuto.posicion);
 
-const ironMan = {
+let ironMan = {
     nombre: "Iron Man",
     equipo: "Avengers",
     poderes: ["Volar", "Lanzar misiles", "Disparar láser"],
@@ -72,7 +72,7 @@ const ironMan = {
     }
 };
 
-const Hulk = {
+let Hulk = {
     nombre: "Hulk",
     equipo: "Avengers",
     poderes: ["Aplastar", "Gritar", "Golpear"],
@@ -93,8 +93,8 @@ function numeroAleatorio() {
 }
 
 for (let i = 0; i < 3; i++) {
-    const poderIronMan = ironMan.getPoder(numeroAleatorio());
-    const poderHulk = Hulk.getPoder(numeroAleatorio());
+    let poderIronMan = ironMan.getPoder(numeroAleatorio());
+    let poderHulk = Hulk.getPoder(numeroAleatorio());
 
     console.log(poderIronMan);
     console.log(poderHulk);

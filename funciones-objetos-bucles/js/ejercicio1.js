@@ -12,18 +12,18 @@ function largoDelArray(array) {
     return array.length;
 }
 
-const miArray = [1, 2, 3, 4, 5];
+let miArray = [1, 2, 3, 4, 5];
 console.log(largoDelArray(miArray)); 
 
 function cantidadDeLetras(palabra) {
     return palabra.length;
 }
 
-const mipalabra = "Gallardo";
+let mipalabra = "Gallardo";
 console.log(cantidadDeLetras(mipalabra)); 
 
 function dolarHoy(precioEnPesos) {
-    const tasaDeCambio = 100; 
+    let tasaDeCambio = 100; 
     let precioEnDolares = precioEnPesos / tasaDeCambio;
     return precioEnDolares;
 }
@@ -33,7 +33,7 @@ let precioEnDolares = dolarHoy(precioEnPesos);
 console.log(precioEnDolares.toFixed(2));
 
 function precioFinal(precio) {
-    const iva = 0.21; 
+    let iva = 0.21; 
     let precioConIva = precio + (precio * iva);
     return precioConIva;
 }
@@ -55,7 +55,7 @@ function diaSegunNumero(dias, numero) {
         return array.length;
     }
 
-    const largo = largoDelArray(dias);
+    let largo = largoDelArray(dias);
 
     if (numero >= 1 && numero <= largo) {
         return dias[numero - 1];

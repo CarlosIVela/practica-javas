@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const characterList = document.querySelector('.characterList');
+    let characterList = document.querySelector('.characterList');
 
     fetch('https://rickandmortyapi.com/api/character')
         .then(response => response.json())

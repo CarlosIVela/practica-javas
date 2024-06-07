@@ -1,6 +1,6 @@
 window.addEventListener('load', function() {
-    const params = new URLSearchParams(window.location.search);
-    const characterId = params.get('id');
+    let params = new URLSearchParams(window.location.search);
+    let characterId = params.get('id');
 
     if (characterId) {
         fetch(`https://rickandmortyapi.com/api/character/${characterId}`)

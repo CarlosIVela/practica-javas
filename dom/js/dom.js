@@ -8,7 +8,6 @@ if (confirmacion) {
     saludoElement.textContent = "Qué alegría que quieras continuar tu visita.";
 } else {
     saludoElement.textContent = "Lamentamos que no quieras continuar tu visita.";
-    // opcion para que no siga el flujo del ejercicio. No se ejecutan mas ejs
     throw new Error("El usuario no quiere continuar.");
 }
 // ej c
