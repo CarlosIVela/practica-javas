@@ -28,7 +28,7 @@ let lista = document.querySelector(".lista")
                 <p>Status: ${info[i].status}</p>
                 <a href="detalle.html?id=${info[i].id}">Ver más</a>
             </article>`
-            lista.innerHTML = 
+            lista.innerHTML = mensaje
 
             })  
             .catch(function(e){
